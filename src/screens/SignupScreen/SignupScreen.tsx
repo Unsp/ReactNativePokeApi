@@ -2,8 +2,8 @@ import { View } from "react-native";
 
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import userSlice from "src/entities/user/api/user.slice";
-import { IUser } from "src/entities/user/types/user.types";
+import userSlice from "src/entities/user/model/slice/user.slice";
+import { IUser } from "src/entities/user/model/types/user.types";
 import { regex } from "src/shared/lib/constants";
 import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";

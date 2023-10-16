@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { PokemonRecentState } from "../model/types/pokemon.types";
+import { PokemonRecentState } from "../types/pokemon.types";
 
 const initialState: PokemonRecentState = {
     pokemonIds: [1, 2, 3, 4, 5],
