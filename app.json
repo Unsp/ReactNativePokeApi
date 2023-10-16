@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "ReactNativePokeApi",
+    "slug": "ReactNativePokeApi",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "jobapp",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": false,
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      }
+    },
+    "android": {
+      "package": "com.unsp.ReactNativePokeApi"
+    }
+  }
+}
