@@ -1,9 +1,8 @@
-import { IPokemonListItem } from "../../model/types/pokemon.types";
-import { Text, View, Image, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
-import { styles } from "./PokemonRecentListItem.styles";
+import { Image, TouchableOpacity, View } from "react-native";
 import { useAppDispatch } from "src/shared/lib/hooks/redux";
 import recentPokemonSlice from "../../api/recentPokemon.slice";
+import { styles } from "./PokemonRecentListItem.styles";
 
 interface PokemonRecentListItemProps {
   pokemonId: number;

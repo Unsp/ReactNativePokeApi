@@ -1,13 +1,13 @@
-import { View, Text } from "react-native";
+import { Text, View } from "react-native";
 
-import { styles } from "./HomeSignedIn.styles";
 import { useRouter } from "expo-router";
-import PokemonRecent from "src/features/PokemonRecent/PokemonRecent";
-import AppButton from "src/shared/ui/AppButton/AppButton";
-import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
-import AppTextButton from "src/shared/ui/AppTextButton/AppTextButton";
 import userSlice from "src/entities/user/api/user.slice";
+import PokemonRecent from "src/features/PokemonRecent/PokemonRecent";
+import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";
+import AppButton from "src/shared/ui/AppButton/AppButton";
+import AppTextButton from "src/shared/ui/AppTextButton/AppTextButton";
+import { styles } from "./HomeSignedIn.styles";
 
 const HomeSignedIn = () => {
   const router = useRouter();

@@ -1,13 +1,9 @@
-import {
-  View,
-  ScrollView,
-  SafeAreaView,
-  Text,
-  TouchableOpacity,
-} from "react-native";
 import { Stack, useRouter } from "expo-router";
-import { colors } from "src/shared/lib/constants";
+import {
+  SafeAreaView
+} from "react-native";
 import HomeScreen from "src/screens/HomeScreen/HomeScreen";
+import { colors } from "src/shared/lib/constants";
 
 const Page = () => {
   const router = useRouter();

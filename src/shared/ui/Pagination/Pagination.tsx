@@ -1,7 +1,7 @@
-import { View, TextInput } from "react-native";
+import { TextInput, View } from "react-native";
 
-import { styles } from "./Pagination.styles";
 import AppButton from "../AppButton/AppButton";
+import { styles } from "./Pagination.styles";
 
 interface CustomTextInputProps extends React.ComponentProps<typeof TextInput> {
   pageSize: number;

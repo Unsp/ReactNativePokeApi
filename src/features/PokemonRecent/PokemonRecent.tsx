@@ -1,10 +1,8 @@
-import { View, Text, FlatList } from "react-native";
+import { FlatList, Text, View } from "react-native";
 
-import { styles } from "./PokemonRecent.styles";
 import PokemonRecentListItem from "src/entities/pokemon/ui/PokemonRecentListItem/PokemonRecentListItem";
-import { IPokemonListItem } from "src/entities/pokemon/model/types/pokemon.types";
-import recentPokemonSlice from "src/entities/pokemon/api/recentPokemon.slice";
 import { useAppSelector } from "src/shared/lib/hooks/redux";
+import { styles } from "./PokemonRecent.styles";
 
 const PokemonRecent = () => {
   const data = useAppSelector((state) => state.recentPokemonReducer.pokemonIds);

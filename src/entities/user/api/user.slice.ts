@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { IUser, UserState } from "../types/user.types";
 import { hashPassword } from "src/shared/lib/utils/passwordUtils";
+import { IUser, UserState } from "../types/user.types";
 
 const initialState: UserState = {
   userList: [

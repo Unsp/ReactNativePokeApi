@@ -1,16 +1,15 @@
-import { View, Text } from "react-native";
+import { Text, View } from "react-native";
 
-import { styles } from "./LoginScreen.styles";
+import { useRouter } from "expo-router";
 import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
-import { Stack, useRouter } from "expo-router";
-import { compareHashedPassword } from "src/shared/lib/utils/passwordUtils";
 import userSlice from "src/entities/user/api/user.slice";
-import AppTextInput from "src/shared/ui/AppTextInput/AppTextInput";
-import AppButton from "src/shared/ui/AppButton/AppButton";
-import { system } from "src/shared/lib/constants";
 import { IUser } from "src/entities/user/types/user.types";
+import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
+import { compareHashedPassword } from "src/shared/lib/utils/passwordUtils";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";
+import AppButton from "src/shared/ui/AppButton/AppButton";
+import AppTextInput from "src/shared/ui/AppTextInput/AppTextInput";
+import { styles } from "./LoginScreen.styles";
 
 const LoginScreen = () => {
   const [username, setUsername] = useState("");
@@ -22,7 +21,7 @@ const LoginScreen = () => {
   const { setActiveUser } = userSlice.actions;
   const router = useRouter();
 
-  const autoLogin = async (user: IUser) => {};
+  const autoLogin = async (user: IUser) => { };
 
   const onLoginPress = () => {
     const user = users.find(

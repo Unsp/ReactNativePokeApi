@@ -1,12 +1,12 @@
-import { View, Text } from "react-native";
+import { Text, View } from "react-native";
 
-import { styles } from "./HomePublic.styles";
 import { useRouter } from "expo-router";
-import AppTextButton from "src/shared/ui/AppTextButton/AppTextButton";
-import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
-import userSlice from "src/entities/user/api/user.slice";
 import { useEffect } from "react";
+import userSlice from "src/entities/user/api/user.slice";
+import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";
+import AppTextButton from "src/shared/ui/AppTextButton/AppTextButton";
+import { styles } from "./HomePublic.styles";
 
 const HomePublic = () => {
   const router = useRouter();

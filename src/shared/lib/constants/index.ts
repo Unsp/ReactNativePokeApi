@@ -38,4 +38,4 @@ const system = {
   secureStorageUserKey: "activeUsername",
 };
 
-export { sizes, colors, fonts, regex, system };
+export { colors, fonts, regex, sizes, system };

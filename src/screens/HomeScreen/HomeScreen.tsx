@@ -1,9 +1,9 @@
-import { View, Text } from "react-native";
+import { Text, View } from "react-native";
 
-import { styles } from "./HomeScreen.styles";
-import { useAppSelector } from "src/shared/lib/hooks/redux";
 import HomePublic from "src/features/HomePublic/HomePublic";
 import HomeSignedIn from "src/features/HomeSignedIn/HomeSignedIn";
+import { useAppSelector } from "src/shared/lib/hooks/redux";
+import { styles } from "./HomeScreen.styles";
 
 const HomeScreen = () => {
   const { isLoggedIn } = useAppSelector((state) => state.userReducer);

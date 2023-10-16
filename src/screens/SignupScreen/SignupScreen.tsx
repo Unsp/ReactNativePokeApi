@@ -1,15 +1,15 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 
-import { styles } from "./SignupScreen.styles";
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
 import userSlice from "src/entities/user/api/user.slice";
-import { regex, system } from "src/shared/lib/constants";
-import AppTextInput from "src/shared/ui/AppTextInput/AppTextInput";
-import AppButton from "src/shared/ui/AppButton/AppButton";
 import { IUser } from "src/entities/user/types/user.types";
+import { regex } from "src/shared/lib/constants";
+import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";
+import AppButton from "src/shared/ui/AppButton/AppButton";
+import AppTextInput from "src/shared/ui/AppTextInput/AppTextInput";
+import { styles } from "./SignupScreen.styles";
 
 const SignupScreen = () => {
   const [username, setUsername] = useState("");

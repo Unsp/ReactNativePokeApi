@@ -1,12 +1,12 @@
-import { SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
+import { SplashScreen, Stack } from "expo-router";
 import { useCallback } from "react";
 import { View } from "react-native";
+import ErrorBoundary from "react-native-error-boundary";
 import { Provider } from "react-redux";
 import { setupStore } from "src/app-root/store/store";
-import { colors } from "src/shared/lib/constants";
-import ErrorBoundary from "react-native-error-boundary";
 import ErrorFallback from "src/features/ErrorFallback/ErrorFallback";
+import { colors } from "src/shared/lib/constants";
 
 SplashScreen.preventAutoHideAsync();
 
