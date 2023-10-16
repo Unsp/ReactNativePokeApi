@@ -6,7 +6,7 @@ import ErrorBoundary from "react-native-error-boundary";
 import { Provider } from "react-redux";
 import { setupStore } from "src/app-root/store/store";
 import ErrorFallback from "src/features/ErrorFallback/ErrorFallback";
-import { colors } from "src/shared/lib/constants";
+import { colors, sizes } from "src/shared/lib/constants";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -39,7 +39,7 @@ const Layout = () => {
         <View
           style={{
             flex: 1,
-            paddingHorizontal: 5,
+            paddingHorizontal: sizes.small,
             backgroundColor: colors.lightGrey,
           }}
           onLayout={onLayoutRootView}
