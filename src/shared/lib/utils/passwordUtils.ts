@@ -2,32 +2,30 @@ import bcrypt from "react-native-bcrypt";
 import isaac from "isaac";
 
 //should be handled on backend
-export const hashPassword = (password: string) : string => {
+export const hashPassword = (password: string): string => {
+  bcrypt.setRandomFallback((len) => {
+    const buf: number[] = [];
+    for (let i = 0; i < len; i++) buf.push(i);
 
-    bcrypt.setRandomFallback((len) => {
-        const buf: number[] = []
-        for(let i = 0; i < len; i++)
-            buf.push(i)
-    
-        return buf.map(() => Math.floor(isaac.random() * 256));
-    });
-    
-    const salt = bcrypt.genSaltSync();
-    const hash = bcrypt.hashSync(password, salt);
+    return buf.map(() => Math.floor(isaac.random() * 256));
+  });
 
-    return hash;
-}
+  const salt = bcrypt.genSaltSync();
+  const hash = bcrypt.hashSync(password, salt);
 
-export const compareHashedPassword = (password: string, hashedPassword: string) : boolean => {
+  return hash;
+};
 
-    bcrypt.setRandomFallback((len) => {
-        const buf: number[] = []
-        for(let i = 0; i < len; i++)
-            buf.push(i)
-    
-        return buf.map(() => Math.floor(isaac.random() * 256));
-    });
-    
+export const compareHashedPassword = (
+  password: string,
+  hashedPassword: string,
+): boolean => {
+  bcrypt.setRandomFallback((len) => {
+    const buf: number[] = [];
+    for (let i = 0; i < len; i++) buf.push(i);
 
-    return bcrypt.compareSync(password, hashedPassword);
-}
+    return buf.map(() => Math.floor(isaac.random() * 256));
+  });
+
+  return bcrypt.compareSync(password, hashedPassword);
+};

@@ -3,11 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "baseUrl": "./",
-    "paths": {
-    }
+    "paths": {}
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"]
 }
