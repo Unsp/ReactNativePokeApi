@@ -1,5 +1,6 @@
 import bcrypt from "react-native-bcrypt";
 import isaac from "isaac";
+
 //should be handled on backend
 export const hashPassword = (password: string) : string => {
 
