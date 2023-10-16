@@ -3,7 +3,7 @@ import { View, Text, FlatList, ActivityIndicator } from "react-native";
 import { styles } from "./PokemonList.styles";
 import { colors } from "src/shared/lib/constants";
 import Pagination from "src/shared/ui/Pagination/Pagination";
-import PokemonListItem from "src/entities/pokemon/ui/PokemonListItemRename/PokemonListItem";
+import PokemonListItem from "src/entities/pokemon/ui/PokemonListItem/PokemonListItem";
 import { PokemonApi } from "src/entities/pokemon/api/PokemonApi";
 import { useAppSelector } from "src/shared/lib/hooks/redux";
 
