@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import userSlice from "src/entities/user/model/slice/user.slice";
 import PokemonRecent from "src/features/PokemonRecent/PokemonRecent";
+import PokemonSearch from "src/features/PokemonSearch/PokemonSearch";
 import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";
 import AppButton from "src/shared/ui/AppButton/AppButton";
@@ -33,7 +34,7 @@ const HomeSignedIn = () => {
         <AppTextButton text="Sign out" onPress={signoutPress} />
       </Text>
       <PokemonRecent />
-
+      <PokemonSearch />
       <View style={styles.listContainer}>
         <AppButton text="Open full list" onPress={listPress} />
       </View>
