@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { IUser, UserState } from "./user.types";
+import { IUser, UserState } from "../types/user.types";
 import { hashPassword } from "src/shared/lib/utils/passwordUtils";
 
 

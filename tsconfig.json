@@ -9,5 +9,5 @@
   "include": [
     "**/*.ts",
     "**/*.tsx"
-, "components/jobdetails/tabs/tabs.style.ts"  ]
+  ]
 }

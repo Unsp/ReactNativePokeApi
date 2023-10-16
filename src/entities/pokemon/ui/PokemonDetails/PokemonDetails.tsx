@@ -3,6 +3,10 @@ import { View, Text, Image, ActivityIndicator, FlatList } from "react-native"
 import { styles } from "./PokemonDetails.styles";
 import { PokemonApi } from "src/entities/pokemon/api/PokemonApi";
 import { colors } from "src/shared/lib/constants";
+import { Stack } from "expo-router";
+import { useAppDispatch } from "src/shared/lib/hooks/redux";
+import recentPokemonSlice, { recentPokemonReducer } from "../../api/recentPokemon.slice";
+import { useEffect } from "react";
 
 interface PokemonDetailsProps {
     name: string
@@ -12,6 +16,7 @@ const PokemonDetails = ({name}: PokemonDetailsProps) => {
     
 
     const {data, error, isLoading, isFetching} = PokemonApi.useFetchPokemonByNameQuery(name);
+
 
     if(isLoading || isFetching) {
         return (<ActivityIndicator size='large' color={colors.secondary}/>)
@@ -25,8 +30,14 @@ const PokemonDetails = ({name}: PokemonDetailsProps) => {
         )
     }
 
+
     return (
         <View style={styles.container}>
+            <Stack.Screen
+                options={{
+                    headerTitle: data?.name,
+                }}
+            />
             <View style={styles.imageContainer}>  
                 <Image
                     source={{uri:data?.sprites.front_default}}

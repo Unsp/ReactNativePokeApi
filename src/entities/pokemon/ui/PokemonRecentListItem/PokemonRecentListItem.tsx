@@ -1,50 +1,38 @@
 import { IPokemonListItem } from "../../model/types/pokemon.types";
 import { Text, View, Image, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
-import { styles } from "./PokemonListItem.styles";
+import { styles } from "./PokemonRecentListItem.styles";
 import { useAppDispatch } from "src/shared/lib/hooks/redux";
 import recentPokemonSlice from "../../api/recentPokemon.slice";
-import { useEffect } from "react";
 
 
-interface PokemonListItemProps {
-    pokemon: IPokemonListItem
+interface PokemonRecentListItemProps {
+    pokemonId: number
 }
 
-const PokemonListItem = ({pokemon}: PokemonListItemProps) => {
+const PokemonRecentListItem = ({pokemonId}: PokemonRecentListItemProps) => {
 
-    const regex = /^https:\/\/pokeapi.co\/api\/v2\/pokemon\/([\d]+)\/$/i;
     const router = useRouter();
-
-    const match = regex.exec(pokemon.url);
-    
-    const id = match ? match[1] : 0;
 
     const dispatch = useAppDispatch();
     const {pushRecent} = recentPokemonSlice.actions;
-
+    
     const onItemPress = () => {
-        dispatch(pushRecent(id as number));
-
-        router.push(`/pokemon/${pokemon.name}`)
+        dispatch(pushRecent(pokemonId as number));
+        router.push(`/pokemon/${pokemonId}`)
     }
-    
-    
-    useEffect(()=>{
-    }, [])
 
     return(
     <TouchableOpacity style={styles.container} onPress={onItemPress}>
         <View style={styles.imageContainer}>
             <Image
-                source={{uri:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}}
+                source={{uri:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}}
                 width={50}
                 height={50}
             />
         </View>
-        <Text style={styles.text}>{pokemon.name}</Text>
     </TouchableOpacity>
     )
 }
 
-export default PokemonListItem;
+export default PokemonRecentListItem;

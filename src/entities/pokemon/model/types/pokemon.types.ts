@@ -37,3 +37,7 @@ export interface IPokemon {
     ]
     
 }
+
+export interface PokemonRecentState {
+    pokemonIds: number[]
+}

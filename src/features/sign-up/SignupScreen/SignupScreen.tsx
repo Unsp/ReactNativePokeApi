@@ -4,11 +4,11 @@ import { styles } from "./SignupScreen.styles";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
-import userSlice from "src/entities/user/user.slice";
+import userSlice from "src/entities/user/api/user.slice";
 import { regex, system } from "src/shared/lib/constants";
 import AppTextInput from "src/shared/ui/AppTextInput/AppTextInput";
 import AppButton from "src/shared/ui/AppButton/AppButton";
-import { IUser } from "src/entities/user/user.types";
+import { IUser } from "src/entities/user/types/user.types";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";
 
 const SignupScreen = () => {

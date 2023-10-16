@@ -1,11 +1,13 @@
 
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import {userReducer} from "src/entities/user/user.slice";
+import {userReducer} from "src/entities/user/api/user.slice";
 import { PokemonApi } from "src/entities/pokemon/api/PokemonApi";
+import { recentPokemonReducer } from "src/entities/pokemon/api/recentPokemon.slice";
 
 
 const rootReducer = combineReducers({
     userReducer,
+    recentPokemonReducer,
     [PokemonApi.reducerPath]: PokemonApi.reducer
 });
 
