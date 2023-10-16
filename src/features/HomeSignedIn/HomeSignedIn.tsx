@@ -1,7 +1,7 @@
 import { Text, View } from "react-native";
 
 import { useRouter } from "expo-router";
-import userSlice from "src/entities/user/api/user.slice";
+import userSlice from "src/entities/user/model/slice/user.slice";
 import PokemonRecent from "src/features/PokemonRecent/PokemonRecent";
 import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";

@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 import { Image, TouchableOpacity, View } from "react-native";
 import { useAppDispatch } from "src/shared/lib/hooks/redux";
-import recentPokemonSlice from "../../api/recentPokemon.slice";
+import recentPokemonSlice from "../../model/slice/recentPokemon.slice";
 import { styles } from "./PokemonRecentListItem.styles";
 
 interface PokemonRecentListItemProps {
