@@ -5,11 +5,11 @@ import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
 import { Stack, useRouter } from "expo-router";
 import { compareHashedPassword } from "src/shared/lib/utils/passwordUtils";
-import userSlice from "src/entities/user/user.slice";
+import userSlice from "src/entities/user/api/user.slice";
 import AppTextInput from "src/shared/ui/AppTextInput/AppTextInput";
 import AppButton from "src/shared/ui/AppButton/AppButton";
 import { system } from "src/shared/lib/constants";
-import { IUser } from "src/entities/user/user.types";
+import { IUser } from "src/entities/user/types/user.types";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";
 
 const LoginScreen = () => {

@@ -23,7 +23,7 @@ const Page = () => {
                 options={{
                     headerStyle: {backgroundColor: colors.lightGrey},
                     headerShadowVisible: false,
-                    headerTitle: params.name as string,
+                    headerTitle: '',
                     headerTitleAlign: "center"
                 }}
             />

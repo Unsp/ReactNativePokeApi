@@ -4,7 +4,7 @@ import { styles } from "./HomePublic.styles";
 import { useRouter } from "expo-router";
 import AppTextButton from "src/shared/ui/AppTextButton/AppTextButton";
 import { useAppDispatch, useAppSelector } from "src/shared/lib/hooks/redux";
-import userSlice from "src/entities/user/user.slice";
+import userSlice from "src/entities/user/api/user.slice";
 import { useEffect } from "react";
 import secureStorageUtils from "src/shared/lib/utils/secureStorageUtils";
 
