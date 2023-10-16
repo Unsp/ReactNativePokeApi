@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { userReducer } from "src/entities/user/api/user.slice";
 import { PokemonApi } from "src/entities/pokemon/api/PokemonApi";
 import { recentPokemonReducer } from "src/entities/pokemon/api/recentPokemon.slice";
+import { userReducer } from "src/entities/user/api/user.slice";
 
 const rootReducer = combineReducers({
   userReducer,

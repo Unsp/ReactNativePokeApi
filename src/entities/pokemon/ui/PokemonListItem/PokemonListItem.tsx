@@ -1,10 +1,10 @@
-import { IPokemonListItem } from "../../model/types/pokemon.types";
-import { Text, View, Image, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
-import { styles } from "./PokemonListItem.styles";
+import { useEffect } from "react";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { useAppDispatch } from "src/shared/lib/hooks/redux";
 import recentPokemonSlice from "../../api/recentPokemon.slice";
-import { useEffect } from "react";
+import { IPokemonListItem } from "../../model/types/pokemon.types";
+import { styles } from "./PokemonListItem.styles";
 
 interface PokemonListItemProps {
   pokemon: IPokemonListItem;
@@ -27,7 +27,7 @@ const PokemonListItem = ({ pokemon }: PokemonListItemProps) => {
     router.push(`/pokemon/${pokemon.name}`);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   return (
     <TouchableOpacity style={styles.container} onPress={onItemPress}>

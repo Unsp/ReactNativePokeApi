@@ -1,5 +1,5 @@
-import { SafeAreaView } from "react-native";
 import { Stack, useRouter } from "expo-router";
+import { SafeAreaView } from "react-native";
 import LoginScreen from "src/screens/LoginScreen/LoginScreen";
 import { colors } from "src/shared/lib/constants";
 

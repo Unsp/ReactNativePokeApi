@@ -1,11 +1,10 @@
-import { Text, TouchableOpacity } from "react-native";
+import { Text } from "react-native";
 
 import { styles } from "./AppTextButton.styles";
 
 interface CustomButtonProps
-  extends React.ComponentProps<typeof TouchableOpacity> {
+  extends React.ComponentProps<typeof Text> {
   text?: string;
-  color?: "primary" | "secondary";
 }
 
 const AppTextButton = (props: CustomButtonProps) => {

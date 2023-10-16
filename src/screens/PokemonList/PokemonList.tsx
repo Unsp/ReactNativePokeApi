@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
-import { View, Text, FlatList, ActivityIndicator } from "react-native";
-import { styles } from "./PokemonList.styles";
+import { useState } from "react";
+import { ActivityIndicator, FlatList, Text, View } from "react-native";
+import { PokemonApi } from "src/entities/pokemon/api/PokemonApi";
+import PokemonListItem from "src/entities/pokemon/ui/PokemonListItem/PokemonListItem";
 import { colors } from "src/shared/lib/constants";
 import Pagination from "src/shared/ui/Pagination/Pagination";
-import PokemonListItem from "src/entities/pokemon/ui/PokemonListItem/PokemonListItem";
-import { PokemonApi } from "src/entities/pokemon/api/PokemonApi";
-import { useAppSelector } from "src/shared/lib/hooks/redux";
+import { styles } from "./PokemonList.styles";
 
 const PokemonList = () => {
   const pageSize = 100;

@@ -1,13 +1,9 @@
-import {
-  View,
-  ScrollView,
-  SafeAreaView,
-  Text,
-  TouchableOpacity,
-} from "react-native";
 import { Stack, useRouter } from "expo-router";
-import { colors } from "src/shared/lib/constants";
+import {
+  SafeAreaView
+} from "react-native";
 import PokemonList from "src/screens/PokemonList/PokemonList";
+import { colors } from "src/shared/lib/constants";
 import { useAppSelector } from "src/shared/lib/hooks/redux";
 
 const Page = () => {

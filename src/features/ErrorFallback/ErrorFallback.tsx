@@ -1,7 +1,7 @@
-import { View, Text, SafeAreaView } from "react-native";
-import { styles } from "./ErrorFallback.styles";
+import { useRouter } from "expo-router";
+import { SafeAreaView, Text, View } from "react-native";
 import AppButton from "src/shared/ui/AppButton/AppButton";
-import { Stack, useRouter } from "expo-router";
+import { styles } from "./ErrorFallback.styles";
 
 interface ErrorFallbackProps {
   error: Error;

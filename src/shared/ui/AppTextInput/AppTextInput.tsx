@@ -1,4 +1,4 @@
-import { View, Text, TextInput } from "react-native";
+import { Text, TextInput, View, ViewStyle } from "react-native";
 
 import { styles } from "./AppTextInput.styles";
 
@@ -9,7 +9,7 @@ interface CustomTextInputProps extends React.ComponentProps<typeof TextInput> {
 const AppTextInput = (props: CustomTextInputProps) => {
   const { error, ...other } = props;
 
-  const wrapperStyle: any = [styles.wrapper];
+  const wrapperStyle: ViewStyle[] = [styles.wrapper];
   if (error) {
     wrapperStyle.push(styles.wrapperError);
   }
